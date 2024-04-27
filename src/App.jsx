@@ -1,11 +1,12 @@
 import './Styles/App.css'
-import LoginBox from './Components/LoginBox'
-
-function App() {
+// import LoginPage from './Pages/LoginPage'
+import SignupPage from './Pages/SignupPage'
+const App = () => {
   return (
-    <>
-      <LoginBox />
-    </>
+    <div>
+      {/* <LoginPage /> */}
+      <SignupPage />
+    </div>
   )
 }
 

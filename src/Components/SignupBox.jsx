@@ -4,12 +4,12 @@ import lightInsta from "../Assets/Images/instagram-image-white.svg"
 // useSelector hook from redux is used to access items from the redux store
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
-
+import { useAuth0 } from "@auth0/auth0-react";
 import 'react-toastify/dist/ReactToastify.css';
 
-const LoginBox = () => {
+const SignupBox = () => {
 
-
+    const { loginWithRedirect } = useAuth0();
 
 
     const theme = useSelector((state) => state.theme.value)
@@ -23,8 +23,10 @@ const LoginBox = () => {
         noNumber: false,
         noSymol: false
     })
+    const [isNotValidEmail, setisNotValidEmail] = useState(false)
     let userdetail = useRef({
         username: '',
+        email: "",
         password: ''
     })
 
@@ -78,6 +80,16 @@ const LoginBox = () => {
             })
         }
 
+        if (e.target.name === 'email') {
+            const email = e.target.value;
+            // Regular expression to validate email format
+            const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            setisNotValidEmail(!isValidEmail);
+        }
+
+
+
+
         const name = e.target.name
         const value = e.target.value
         userdetail.current = {
@@ -106,15 +118,25 @@ const LoginBox = () => {
                 <form className=" mx-auto flex justify-center items-center flex-col login-form-main">
 
 
-                    <input type="text" name="username" placeholder="Enter Your Username" className="border border-solid border-black my-3 "
+                    <input type="text" name="username" placeholder="Enter Your Username" className="border border-solid border-black my-1 "
                         onChange={(e) => {
                             handleChange(e)
                         }}
                     />
+
+
                     {isNotValidUsername && <h3 className="mx-auto border-black text-red-400 text-sm">Oops! Not this symbol please</h3>}
 
+                    <input type="text" name="email" placeholder="Enter Your Email" className="border border-solid border-black my-1 "
+                        onChange={(e) => {
+                            handleChange(e)
+                        }}
+                    />
 
-                    <input type="text" name="password" placeholder="Enter Your password" className="border border-solid border-black mx-auto "
+                    {isNotValidEmail && <h3 className="mx-auto border-black text-red-400 text-sm">Email invalid</h3>}
+                    {!isNotValidEmail && userdetail.current.email.length > 0 && <h3 className="mx-auto border-black text-green-400 text-sm">Email is Valid</h3>}
+
+                    <input type="text" name="password" placeholder="Enter Your password" className="border border-solid border-black mx-auto my-1 "
                         onChange={(e) => {
                             handleChange(e)
                         }}
@@ -146,7 +168,7 @@ const LoginBox = () => {
 
 
 
-                    <button className="border border-solid px-2 m-auto text-center block  mt-6 rounded-md " type="button" onClick={async () => {
+                    <button className={`px-3 py-1 m-auto text-center block bg-blue-700  rounded-md w-[256px] ${theme == "lightTheme" && "text-white"} `} type="button" onClick={async () => {
 
                         if (isNotValidUsername || isNotValidPassword.noLowercase || isNotValidPassword.noMinlength || isNotValidPassword.noNumber || isNotValidPassword.noUppercase || isNotValidPassword.noSymol) {
                             toast.error('Password is not valid', {
@@ -160,7 +182,8 @@ const LoginBox = () => {
                             });
                             return
                         }
-                        if (userdetail.current.password.length == 0 || userdetail.current.username.length == 0) {
+                        if (userdetail.current.password.length == 0 || userdetail.current.username.length == 0 || userdetail.current.email.length == 0) {
+                            console.log("details are ", userdetail.current.email, userdetail.current.password, userdetail.current.username)
                             toast.warning('Oops! looks like you forgot to fill something', {
                                 position: "top-right",
                                 autoClose: true,
@@ -172,9 +195,21 @@ const LoginBox = () => {
                             });
                             return
                         }
+                        if (isNotValidEmail) {
+                            toast.warning('Email does not look valid', {
+                                position: "top-right",
+                                autoClose: true,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                theme: theme == "darkTheme" ? "dark" : "light",
+                            })
+                            return
+                        }
 
                         try {
-                            const response = await fetch("http://localhost:3500/authenticate/login", {
+                            const response = await fetch("http://localhost:3500/authenticate/signup", {
                                 method: "POST",
                                 headers: {
                                     //mentioning content type is important so that express can easily understand the data type
@@ -238,13 +273,21 @@ const LoginBox = () => {
                         }
 
                     }} >
-                        Login
+                        Sign Up
                     </button>
 
                 </form>
 
-                <h3 className="text-center signup-text py-2" >  Don&apos;t have an account?
-                    <a href="https://google.com">Sign up</a> </h3>
+                <div className="flex justify-between my-3 w-[256px] mx-auto items-center">
+                    <div className="w-[44%] bg-black h-[1px] "></div>
+                    OR
+                    <div className="w-[44%] bg-black h-[1px] "></div>
+
+                </div>
+                <button className={`px-3 py-1 m-auto text-center block bg-blue-700  rounded-md w-[256px] ${theme == "lightTheme" && "text-white"} `} type="button" onClick={() => loginWithRedirect()}>Continue with google/ github</button>;
+
+                <h3 className="text-center signup-text py-2" >  Already have an account?
+                    <a href="https://google.com">Log In</a> </h3>
 
 
             </div>
@@ -252,4 +295,4 @@ const LoginBox = () => {
     )
 }
 
-export default LoginBox
+export default SignupBox

@@ -6,3 +6,36 @@
   padding: 0;
   margin: 0;
 }
+
+.login-form-main input {
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.dark {
+  background-color: rgb(15 23 42/var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+
+  .login-form-div {
+    background-color: rgba(51, 65, 85, .5);
+  }
+
+  .signup-text {
+    color: white;
+  }
+
+  button {
+    color: white
+  }
+
+  #instagram-logo {
+
+    /* background-image: url("../Assets/Images/instagram-image-white.svg"); */
+    /* background-position: center; */
+    /* object-fit: cover; */
+    /* src: url("../Assets/Images/instagram-image-white.svg"); */
+  }
+
+
+
+}
