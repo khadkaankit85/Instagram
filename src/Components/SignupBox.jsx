@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { useAuth0 } from "@auth0/auth0-react";
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const SignupBox = () => {
 
     const { loginWithRedirect } = useAuth0();
@@ -284,13 +285,19 @@ const SignupBox = () => {
                     <div className="w-[44%] bg-black h-[1px] "></div>
 
                 </div>
-                <button className={`px-3 py-1 m-auto text-center block bg-blue-700  rounded-md w-[256px] ${theme == "lightTheme" && "text-white"} `} type="button" onClick={() => loginWithRedirect()}>Continue with google/ github</button>;
+                <button className={`px-3 py-1 m-auto text-center block bg-blue-700  rounded-md w-[256px] ${theme == "lightTheme" && "text-white"} `} type="button" onClick={() => {
+                    loginWithRedirect()
+                }}
+
+                >Continue with Google</button>
+
 
                 <h3 className="text-center signup-text py-2" >  Already have an account?
                     <a href="https://google.com">Log In</a> </h3>
 
 
-            </div>
+
+            </div >
         </>
     )
 }
