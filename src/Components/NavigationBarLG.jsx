@@ -7,8 +7,19 @@ import searchIconDark from "../Assets/Images/ForApp/Search_button.svg"
 import searchIconLight from "../Assets/Images/ForApp/LightStore/search_icon_light.svg"
 import userIconDark from "../Assets/Images/ForApp/User_icon.png"
 import userIconLight from "../Assets/Images/ForApp/LightStore/user_icon_light.png"
+
+//to change according to theme
+import { useSelector } from 'react-redux'
+
+
 import { Link } from "react-router-dom"
 const LargeUncollapsedNavigationBar = () => {
+    //getting the theme from store:
+    const theme = useSelector((state) => state.theme.value)
+
+
+
+
     return (
         <nav className=" border-solid border-white border-2 fixed left-0 w-[270px] md:w-[300px] h-[100vh]">
             <div>
