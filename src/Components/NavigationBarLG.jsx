@@ -6,6 +6,7 @@ import messengerIconLight from "../Assets/Images/ForApp/LightStore/messenger_ico
 import searchIconDark from "../Assets/Images/ForApp/Search_button.svg"
 import searchIconLight from "../Assets/Images/ForApp/LightStore/search_icon_light.svg"
 import userIconDark from "../Assets/Images/ForApp/User_icon.png"
+import userIconLight from "../Assets/Images/ForApp/LightStore/user_icon_light.png"
 import { Link } from "react-router-dom"
 const LargeUncollapsedNavigationBar = () => {
     return (
