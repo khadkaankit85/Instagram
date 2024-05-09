@@ -27,11 +27,26 @@ const LargeUncollapsedNavigationBar = () => {
                 <img src={theme === "darkTheme" ? darkInsta : lightInsta} alt="instagram logo" width={"60%"} height={"40px"} className="m-1 mx-0" />
             </div>
 
-            <section className="w-full h-[40vh] mt-1  border-solid border-white border-2 ">
-                <div className="flex w-[90%] border p-6 gap-9">
-                    <img src={theme == "lightTheme" ? homeIconLight : homeIconDark} alt="home icon" width={"40px"} height={"40px"} className=" border " />
+            <section className="w-full h-[40vh] mt-1 flex flex-col items-center border-solid border-white border-2 ">
+
+                <div className="flex w-full border p-6 gap-9 h-fit mb-4  items-center">
+                    <img src={theme == "lightTheme" ? homeIconDark : homeIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
                     <h1 className="text-white">Home</h1>
                 </div>
+
+                <div className="flex w-full border p-6 gap-9 mb-4 items-center">
+                    <img src={theme == "lightTheme" ? searchIconDark : searchIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
+                    <h1 className="text-white">Search</h1>
+                </div>
+
+                <div className="flex w-full border p-6 gap-9 mb-4 items-center">
+                    <img src={theme == "lightTheme" ? searchIconDark : searchIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
+                    <h1 className="text-white">Search</h1>
+                </div>
+
+
+
+
 
             </section>
 
