@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import { useAuth0 } from "@auth0/auth0-react";
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 
 const SignupBox = () => {
@@ -210,7 +211,7 @@ const SignupBox = () => {
                         }
 
                         try {
-                            const response = await fetch("http://localhost:3500/authenticate/signup", {
+                            const response = await fetch("http://localhost:3500/otp/getOtp", {
                                 method: "POST",
                                 headers: {
                                     //mentioning content type is important so that express can easily understand the data type
@@ -218,6 +219,9 @@ const SignupBox = () => {
                                 },
                                 body: JSON.stringify(userdetail.current)
                             })
+                            if (response.status == 200) {
+                                window.location = "/emailverification"
+                            }
                             if (!response.ok) {
 
                                 //for unauthorised resposestatus
@@ -234,17 +238,7 @@ const SignupBox = () => {
                                 }
 
                                 //for 
-                                if (response.status == 401) {
-                                    toast.warning('Unauthorised, Please recheck your credentials', {
-                                        position: "top-right",
-                                        autoClose: true,
-                                        hideProgressBar: false,
-                                        closeOnClick: true,
-                                        pauseOnHover: true,
-                                        draggable: true,
-                                        theme: theme == "darkTheme" ? "dark" : "light",
-                                    })
-                                }
+
 
 
                                 else {
@@ -293,7 +287,7 @@ const SignupBox = () => {
 
 
                 <h3 className="text-center signup-text py-2" >  Already have an account?
-                    <a href="https://google.com">Log In</a> </h3>
+                    <Link to="/login">Log In</Link> </h3>
 
 
 

@@ -4,6 +4,8 @@ import lightInsta from "../Assets/Images/instagram-image-white.svg"
 // useSelector hook from redux is used to access items from the redux store
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
+import { Link } from "react-router-dom";
+
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -244,7 +246,7 @@ const LoginBox = () => {
                 </form>
 
                 <h3 className="text-center signup-text py-2" >  Don&apos;t have an account?
-                    <a href="https://google.com">Sign up</a> </h3>
+                    <Link to="/signup">Sign up</Link> </h3>
 
 
             </div>

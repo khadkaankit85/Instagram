@@ -15,13 +15,13 @@ export const counterSlice = createSlice({
             // which detects changes to a "draft state" and produces a brand new
             // immutable state based off those changes
             if (state.value == "lightTheme") {
-                console.log("changing the theme with redux to dark")
+                // console.log("changing the theme with redux to dark")
                 state.value = "darkTheme"
                 localStorage.setItem("theme", state.value)
                 return;
             }
             if (state.value == "darkTheme") {
-                console.log("changing the theme with redux to light")
+                // console.log("changing the theme with redux to light")
 
                 state.value = "lightTheme"
                 localStorage.setItem("theme", state.value)
