@@ -1,4 +1,5 @@
 import darkInsta from "../Assets/Images/instagram-image-black.svg"
+import lightInsta from "../Assets/Images/instagram-image-white.svg"
 import homeIconDark from "../Assets/Images/ForApp/home_button.svg"
 import homeIconLight from "../Assets/Images/ForApp/LightStore/home_light.svg"
 import messengerIconDark from "../Assets/Images/ForApp/home_button.svg"
@@ -23,11 +24,12 @@ const LargeUncollapsedNavigationBar = () => {
     return (
         <nav className=" border-solid border-white border-2 fixed left-0 w-[270px] md:w-[300px] h-[100vh]">
             <div>
-                <img src={darkInsta} alt="instagram logo" width={"60%"} height={"40px"} className="m-1 mx-0" />
+                <img src={theme === "darkTheme" ? darkInsta : lightInsta} alt="instagram logo" width={"60%"} height={"40px"} className="m-1 mx-0" />
             </div>
+
             <section className="w-full h-[40vh] mt-1  border-solid border-white border-2 ">
                 <div className="flex w-[90%] border p-6 gap-9">
-                    <img src={homeIconLight} alt="home icon" width={"40px"} height={"40px"} className=" border " />
+                    <img src={theme == "lightTheme" ? homeIconLight : homeIconDark} alt="home icon" width={"40px"} height={"40px"} className=" border " />
                     <h1 className="text-white">Home</h1>
                 </div>
 
