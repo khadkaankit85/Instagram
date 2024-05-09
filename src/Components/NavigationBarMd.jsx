@@ -13,7 +13,8 @@ import userIconLight from "../Assets/Images/ForApp/LightStore/user_icon_light.pn
 import { useSelector } from 'react-redux'
 
 
-const LargeUncollapsedNavigationBar = () => {
+import { Link } from "react-router-dom"
+const MediumUncollapsedNavigationBar = () => {
     //getting the theme from store:
     const theme = useSelector((state) => state.theme.value)
 
@@ -61,4 +62,4 @@ const LargeUncollapsedNavigationBar = () => {
     )
 }
 
-export default LargeUncollapsedNavigationBar
+export default MediumUncollapsedNavigationBar
