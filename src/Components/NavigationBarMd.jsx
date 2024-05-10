@@ -1,5 +1,5 @@
-import darkInsta from "../Assets/Images/instagram-image-black.svg"
-import lightInsta from "../Assets/Images/instagram-image-white.svg"
+import darkInstaIcon from "../Assets/Images/Instagram-logo.svg"
+import lightInstaIcon from "../Assets/Images/ForApp/LightStore/instagram_light_logo.svg"
 import homeIconDark from "../Assets/Images/ForApp/home_button.svg"
 import homeIconLight from "../Assets/Images/ForApp/LightStore/home_light.svg"
 import messengerIconDark from "../Assets/Images/ForApp/home_button.svg"
@@ -18,9 +18,9 @@ const MediumUncollapsedNavigationBar = () => {
     const theme = useSelector((state) => state.theme.value)
 
     return (
-        <nav className=" border-white fixed left-0 w-[270px] md:w-[300px] h-[100vh]">
+        <nav className=" fixed left-0 w-[100px] h-[100vh]">
             <div>
-                <img src={theme === "darkTheme" ? darkInsta : lightInsta} alt="instagram logo" width={"60%"} height={"40px"} className="m-1 mx-0" />
+                <img src={theme === "darkTheme" ? lightInstaIcon : darkInstaIcon} alt="instagram logo" width={"48px"} className="m-auto mx-auto mb-6" />
             </div>
 
             <section className="w-full h-[50vh] mt-1 flex flex-col items-center border-solid ">
@@ -29,21 +29,18 @@ const MediumUncollapsedNavigationBar = () => {
                     window.location = "/home"
                 }}>
                     <img src={theme == "lightTheme" ? homeIconDark : homeIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                    <h1 className={theme == "darkTheme" ? "text-white" : "text-black"}>Home</h1>
                 </div>
 
                 <div className="flex w-full p-6 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" onClick={() => {
                     window.location = "/searchbar"
                 }}>
                     <img src={theme == "lightTheme" ? searchIconDark : searchIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                    <h1 className={theme == "darkTheme" ? "text-white" : "text-black"}>Search</h1>
                 </div>
 
                 <div className="flex w-full  p-6 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" onClick={() => {
                     window.location = "/messages"
                 }}>
                     <img src={theme == "lightTheme" ? messengerIconDark : messengerIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                    <h1 className={theme == "darkTheme" ? "text-white" : "text-black"}>Messages</h1>
                 </div>
 
             </section>
@@ -53,7 +50,6 @@ const MediumUncollapsedNavigationBar = () => {
                     window.location = "/profile"
                 }}>
                     <img src={theme == "lightTheme" ? userIconDark : userIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                    <h1 className={theme == "darkTheme" ? "text-white" : "text-black"}>Profile</h1>
                 </div>
             </section>
 
