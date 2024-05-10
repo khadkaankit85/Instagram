@@ -14,7 +14,6 @@ const NavigationBar = () => {
 
             <div className=" hidden lg:block ">
                 <LargeNavBar />
-                <p>hello</p>
             </div>
 
         </nav>
