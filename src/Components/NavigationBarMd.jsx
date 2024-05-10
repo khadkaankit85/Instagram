@@ -1,4 +1,4 @@
-import darkInstaIcon from "../Assets/Images/Instagram-logo.svg"
+// import darkInstaIcon from "../Assets/Images/Instagram-logo.svg"
 import darkInstaIcon2 from "../Assets/Images/ForApp/LightStore/instagram_colored_icon.svg"
 import lightInstaIcon from "../Assets/Images/ForApp/LightStore/instagram_light_logo.svg"
 import homeIconDark from "../Assets/Images/ForApp/home_button.svg"
