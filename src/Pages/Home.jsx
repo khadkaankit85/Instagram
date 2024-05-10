@@ -1,14 +1,11 @@
-// import LargeUncollapsedNavigationBar from "../Components/NavigationBarLG"
-// import MediumUncollapsedNavigationBar from "../Components/NavigationBarMd"
-import SmallUncollapsedNavigationBar from "../Components/NavigationBarSm"
 import ThemeToggle from "../Components/ThemeToggle"
+import NavigationBar from "../Components/NavigationBar"
 const Home = () => {
     return (
         <div>
+
             <ThemeToggle />
-            {/* <LargeUncollapsedNavigationBar /> */}
-            {/* <MediumUncollapsedNavigationBar /> */}
-            <SmallUncollapsedNavigationBar />
+            <NavigationBar />
 
         </div>
     )
