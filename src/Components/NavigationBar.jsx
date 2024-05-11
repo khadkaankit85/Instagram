@@ -12,7 +12,7 @@ const NavigationBar = () => {
                 <MediumNavBar />
             </div>
 
-            <div className=" hidden lg:block border border-white fixed left-0 w-fit">
+            <div className=" hidden lg:block border border-white absolute left-0 w-[300px] h-[100vh]">
                 <LargeNavBar />
             </div>
 

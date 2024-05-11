@@ -17,7 +17,7 @@ const SmallUncollapsedNavigationBar = () => {
     const theme = useSelector((state) => state.theme.value)
 
     return (
-        <nav className=" flex w-[100vw] h-[100px] ">
+        <nav className=" flex w-[100vw] h-[80px] ">
 
             <div className="flex w-full p-4 gap-9 h-fit rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" onClick={() => {
                 window.location = "/home"

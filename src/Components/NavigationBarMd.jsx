@@ -19,7 +19,7 @@ const MediumUncollapsedNavigationBar = () => {
     const theme = useSelector((state) => state.theme.value)
 
     return (
-        <nav className=" fixed left-0 w-[100px] h-[100vh]">
+        <nav className="  w-[100px] h-[100vh]">
             <div>
                 <img src={theme === "darkTheme" ? lightInstaIcon : darkInstaIcon2} alt="instagram logo" width={"48px"} className=" mx-4 mb-6" />
             </div>
