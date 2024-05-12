@@ -4,6 +4,8 @@ import MediumNavBar from "../Components/NavigationBarMd"
 import LargeNavBar from "../Components/NavigationBarLG"
 import { Route, Routes } from "react-router-dom"
 
+//inner components
+import Messages from "../Components/Inner Components/Messages"
 const Home = () => {
     return (
         <div className="">
@@ -46,8 +48,7 @@ const Home = () => {
                                 <h1 className="text-white">You are in search route</h1></>} />
 
                             <Route path="/messages" element={
-                                <>
-                                    <h1 className="text-white">this is inbox</h1></>
+                                <Messages />
                             }
                             />
                             <Route path="/profile" element={
