@@ -9,6 +9,7 @@ import searchIconDark from "../Assets/Images/ForApp/Search_button.svg"
 import searchIconLight from "../Assets/Images/ForApp/LightStore/search_icon_light.svg"
 import userIconDark from "../Assets/Images/ForApp/User_icon.png"
 import userIconLight from "../Assets/Images/ForApp/LightStore/user_icon_light.png"
+import { Link } from "react-router-dom"
 
 //to change according to theme
 import { useSelector } from 'react-redux'
@@ -26,32 +27,24 @@ const MediumUncollapsedNavigationBar = () => {
 
             <section className="w-full h-[50vh] mt-1 flex flex-col items-center border-solid ">
 
-                <div className="flex w-full p-4 gap-9 h-fit mb-4 rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" onClick={() => {
-                    window.location = "/home"
-                }}>
+                <Link to={"/home"} className="flex w-full p-4 gap-9 h-fit mb-4 rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" >
                     <img src={theme == "lightTheme" ? homeIconDark : homeIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                </div>
+                </Link>
 
-                <div className="flex w-full p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" onClick={() => {
-                    window.location = "/searchbar"
-                }}>
+                <Link to={"/home/searchbar"} className="flex w-full p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
                     <img src={theme == "lightTheme" ? searchIconDark : searchIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                </div>
+                </Link>
 
-                <div className="flex w-full  p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" onClick={() => {
-                    window.location = "/messages"
-                }}>
+                <Link to={"/direct/messages"} className="flex w-full  p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
                     <img src={theme == "lightTheme" ? messengerIconDark : messengerIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                </div>
+                </Link>
 
             </section>
 
             <section className="mt-[120px]">
-                <div className="flex w-full  p-4 gap-9 rounded-xl  mb-4 items-center hover:bg-[#a3a1a1]" onClick={() => {
-                    window.location = "/profile"
-                }}>
+                <Link to={"/home/profile"} className="flex w-full  p-4 gap-9 rounded-xl  mb-4 items-center hover:bg-[#a3a1a1]" >
                     <img src={theme == "lightTheme" ? userIconDark : userIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
-                </div>
+                </Link>
             </section>
 
         </nav>

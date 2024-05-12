@@ -17,7 +17,7 @@ export const myRouter = createBrowserRouter([
         element: <LoginPage />
     },
     {
-        path: "/home",
+        path: "/home/*",
         element: <Home />
     }, {
         path: "/createaccount",
@@ -25,5 +25,10 @@ export const myRouter = createBrowserRouter([
     }, {
         path: "/emailverification",
         element: <VerifyEmail />
+    },
+    {
+        path: "*",
+        element: <h1 className='text-red-600 p-10'>Page not found</h1>
+
     }
 ])
