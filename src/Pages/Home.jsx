@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom"
 import Messages from "../Components/Inner Components/Messages"
 import Searchbar from "../Components/Inner Components/Searchbar"
 import UserProfile from "../Components/Inner Components/UserProfile"
+import NewsFeed from "../Components/Inner Components/NewsFeed"
 const Home = () => {
     return (
         <div className="">
@@ -44,8 +45,8 @@ const Home = () => {
                     <div>
 
                         <Routes>
-                            <Route path="/" element={<>
-                                <h1 className="text-white">You are in / route</h1></>} />
+                            <Route path="/" element={<NewsFeed />} />
+
                             <Route path="/home/search" element={<>
                                 <h1 className="text-white">You are in search route</h1></>} />
 
