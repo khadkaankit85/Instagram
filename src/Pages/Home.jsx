@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom"
 
 //inner components
 import Messages from "../Components/Inner Components/Messages"
+import Searchbar from "../Components/Inner Components/Searchbar"
 const Home = () => {
     return (
         <div className="">
@@ -56,8 +57,7 @@ const Home = () => {
                                     this is supposed be profile</h1></>
                             } />
 
-                            <Route path="/search" element={<>
-                                <h1 className="text-white"> This is supposed to be search page</h1></>} />
+                            <Route path="/search" element={<Searchbar />} />
                             <Route path="*" element={<>
                                 <h1 className="text-white"> This is supposed to be Not found page</h1></>} />
 
