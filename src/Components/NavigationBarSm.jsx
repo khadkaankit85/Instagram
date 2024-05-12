@@ -19,22 +19,23 @@ const SmallUncollapsedNavigationBar = () => {
     return (
         <nav className=" flex w-[100vw] h-[80px] ">
 
-            <Link to={"/home"} className="flex w-full p-4 gap-9 h-fit rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" >
+            <Link to={"/home"} className="flex w-full p-4 gap-9 h-fit justify-center rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" >
                 <img src={theme == "lightTheme" ? homeIconDark : homeIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
             </Link>
 
-            <Link to={"/home/searchbar"} className="flex w-full p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]">
+            <Link to={"/home/search"} className="flex w-full p-4 justify-center gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]">
                 <img src={theme == "lightTheme" ? searchIconDark : searchIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
             </Link>
 
-            <Link to={"home/messages"} className="flex w-full  p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
+            <Link to={"/home/messages"} className="flex w-full justify-center  p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
                 <img src={theme == "lightTheme" ? messengerIconDark : messengerIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
             </Link>
 
 
-            <Link to={"/home/profile"} className="flex w-full  p-4 gap-9 rounded-xl  mb-4 items-center hover:bg-[#a3a1a1]" >
+            <Link to={"/home/profile"} className="flex w-full justify-center p-4 gap-9 rounded-xl  mb-4 items-center hover:bg-[#a3a1a1]" >
                 <img src={theme == "lightTheme" ? userIconDark : userIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
             </Link>
+
 
         </nav>
     )
