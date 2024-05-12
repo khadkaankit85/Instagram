@@ -21,28 +21,28 @@ const MediumUncollapsedNavigationBar = () => {
 
     return (
         <nav className="  w-[100px] h-[100vh]">
-            <div>
+            <div className="justify-center flex w-full">
                 <img src={theme === "darkTheme" ? lightInstaIcon : darkInstaIcon2} alt="instagram logo" width={"48px"} className=" mx-4 mb-6" />
             </div>
 
-            <section className="w-full h-[50vh] mt-1 flex flex-col items-center border-solid ">
+            <section className="w-full h-[50vh] mt-1 flex  flex-col items-center border-solid ">
 
-                <Link to={"/home"} className="flex w-full p-4 gap-9 h-fit mb-4 rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" >
+                <Link to={"/home"} className="flex justify-center w-full p-4 gap-9 h-fit mb-4 rounded-xl items-center hover:bg-[#a3a1a1] hover:text-black" >
                     <img src={theme == "lightTheme" ? homeIconDark : homeIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
                 </Link>
 
-                <Link to={"/home/search"} className="flex w-full p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
+                <Link to={"/home/search"} className="flex justify-center w-full p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
                     <img src={theme == "lightTheme" ? searchIconDark : searchIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
                 </Link>
 
-                <Link to={"/home/messages"} className="flex w-full  p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
+                <Link to={"/home/messages"} className="flex justify-center w-full  p-4 gap-9 mb-4 rounded-xl items-center hover:bg-[#a3a1a1]" >
                     <img src={theme == "lightTheme" ? messengerIconDark : messengerIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
                 </Link>
 
             </section>
 
             <section className="mt-[120px]">
-                <Link to={"/home/profile"} className="flex w-full  p-4 gap-9 rounded-xl  mb-4 items-center hover:bg-[#a3a1a1]" >
+                <Link to={"/home/profile"} className="flex w-full justify-center p-4 gap-9 rounded-xl  mb-4 items-center hover:bg-[#a3a1a1]" >
                     <img src={theme == "lightTheme" ? userIconDark : userIconLight} alt="home icon" width={"40px"} height={"40px"} className="  " />
                 </Link>
             </section>
