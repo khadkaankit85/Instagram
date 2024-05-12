@@ -10,7 +10,7 @@ const ThemeToggle = () => {
 
     const theme = useSelector((state) => state.theme.value)
 
-    console.log("the value of theme in themetoggle is ", theme)
+    // console.log("the value of theme in themetoggle is ", theme)
 
     //dispatcher helps to dispatch functions/ reducers from the store
     const dispatch = useDispatch()

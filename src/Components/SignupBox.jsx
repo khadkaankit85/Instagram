@@ -15,7 +15,7 @@ const SignupBox = () => {
 
 
     const theme = useSelector((state) => state.theme.value)
-    console.log("the value of the theme coming from store is ", theme)
+    // console.log("the value of the theme coming from store is ", theme)
 
     const [isNotValidUsername, setisNotValidUsername] = useState(false)
     const [isNotValidPassword, setisNotValidPassword] = useState({
@@ -47,7 +47,7 @@ const SignupBox = () => {
             //cannot start with a number, @ and cannot have some restricted symbols
             if (containsRestrictedSymbol || (!isNaN(username[0])) || username[0] == "@") {
                 setisNotValidUsername(true)
-                console.log("validity checked")
+                // console.log("validity checked")
                 // Handle the case here, like showing an error message
             } else {
                 // Username does not contain any restricted symbol

@@ -13,12 +13,12 @@ else {
 }
 
 export function changeTheme() {
-    console.log(body.classList)
+    // console.log(body.classList)
     if (body.classList.contains("dark")) {
         body.classList.remove("dark")
         body.classList.add("light")
         localStorage.setItem("theme", "lightTheme")
-        console.log("dark removed and light added")
+        // console.log("dark removed and light added")
         return
     }
     else if (body.classList.contains("light")) {
@@ -27,7 +27,7 @@ export function changeTheme() {
         localStorage.setItem("theme", "darkTheme")
 
 
-        console.log("dark theme added and light removed")
+        // console.log("dark theme added and light removed")
         return
 
     }
