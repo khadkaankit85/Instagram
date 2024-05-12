@@ -20,7 +20,7 @@ const Home = () => {
                     <LargeNavBar />
                 </div>
 
-                <div className="hidden fixed left-0 md:block lg:hidden sm:hidden border w-[200px] p-3 h-[100vh] border-red-600">
+                <div className="hidden fixed left-0 md:block lg:hidden sm:hidden border w-[200px] p-3 h-[calc(100vh-48px)] border-white">
                     <MediumNavBar />
                 </div>
 
@@ -36,7 +36,7 @@ const Home = () => {
 
                  sm:w-full h-[min(85vh,calc(100vh-100px))] p-6  overflow-y-scroll
 
-                md:block md:absolute md:right-0 md:p-5 md:w-[calc(100%-200px)] md:h-[max(100vh,100%)]
+                md:block md:absolute md:right-0 md:p-5 md:w-[calc(100%-200px)] md:h-[calc(100vh-50px)]
 
                 lg:block border border-white lg:absolute lg:top-[48px] lg:right-0 lg:w-[calc(100%-295px)] lg:h-[calc(100vh-50px)] lg:mx-auto lg:p-8
 
