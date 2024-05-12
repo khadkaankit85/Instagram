@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom"
 //inner components
 import Messages from "../Components/Inner Components/Messages"
 import Searchbar from "../Components/Inner Components/Searchbar"
+import UserProfile from "../Components/Inner Components/UserProfile"
 const Home = () => {
     return (
         <div className="">
@@ -53,8 +54,7 @@ const Home = () => {
                             }
                             />
                             <Route path="/profile" element={
-                                <><h1 className="text-white">
-                                    this is supposed be profile</h1></>
+                                <UserProfile />
                             } />
 
                             <Route path="/search" element={<Searchbar />} />
