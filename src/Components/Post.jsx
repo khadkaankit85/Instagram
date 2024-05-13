@@ -49,7 +49,7 @@ const Post = () => {
 
             <div className="w-[485px] h-[30px] border border-white text-white flex justify-between ">
                 <input className="w-[90%] bg-transparent text-blue-600 active:outline-none active:ring-offset-0" type="text" />
-                <button >Post</button>
+                <button className="text-blue-800" >Post</button>
             </div>
 
         </div>
