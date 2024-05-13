@@ -1,3 +1,5 @@
+import ReadMore from "./Subcomponents/Readmore"
+import { Link } from "react-router-dom"
 const Post = () => {
     return (
         <div className="w-[485px] h-[800px] border border-white">
@@ -15,6 +17,28 @@ const Post = () => {
             <div className="w-[485px] mt-10 text-white h-[520px] border-red-600 border ">
                 <img src="https://avatars.githubusercontent.com/u/145488454?v=4" className="w-[485px] h-[520px] object-cover" alt="" />
             </div>
+
+            <div className="w-[485px] h-[40px] border border-white text-white mt-2">
+                <Link to={"/home/post/comments"} />
+            </div>
+            <div className="w-[485px] h-[30px] border border-white text-white ">
+                97,117 likes
+            </div>
+
+            <div className=" h-fit border border-white text-white mt-2 p-1">
+                username
+
+                <ReadMore text={"this islorem40 fdsajkjalsf lkejsflkdjlke rlekwrjlk;jrewlkjl ekrjlkrejljerl kjelkjlkewrj lkjwrelkj lkwerklwer jljwrelk jwerlkj  the text lol...."} maxLength={5} />
+            </div>
+            <div className="w-[485px] h-[30px] border border-white text-white ">
+                View all 322 comments
+            </div>
+
+            <div className="w-[485px] h-[30px] border border-white text-white flex justify-between ">
+                <input className="w-[90%] bg-transparent text-blue-600 active:outline-none active:ring-offset-0" type="text" />
+                <button >Post</button>
+            </div>
+
         </div>
     )
 }
