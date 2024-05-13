@@ -1,5 +1,7 @@
 import ReadMore from "./Subcomponents/Readmore"
 import { Link } from "react-router-dom"
+import whiteUnlovedIcon from "../Assets/Images/ForApp/WhiteUnlovedImage.png"
+import whiteLovedIcon from "../Assets/Images/ForApp/WhiteLovedImage.png"
 const Post = () => {
     return (
         <div className="w-[485px] h-[800px] border border-white">
@@ -18,8 +20,19 @@ const Post = () => {
                 <img src="https://avatars.githubusercontent.com/u/145488454?v=4" className="w-[485px] h-[520px] object-cover" alt="" />
             </div>
 
-            <div className="w-[485px] h-[40px] border border-white text-white mt-2">
-                <Link to={"/home/post/comments"} />
+            <div className="w-[485px] h-[40px] border border-white text-white mt-2 flex space-x-3">
+
+                <Link to={"/home/post/comments"} className="flex space-x-3 ml-2" >
+                    <img src={whiteUnlovedIcon} width={"35px"} alt="" />
+                </Link>
+
+                <Link to={"/home/post/comments"} className="flex space-x-3 ml-2" >
+                    <img src={whiteUnlovedIcon} width={"35px"} alt="" />
+                </Link>
+
+                <Link to={"/home/post/comments"} className="flex space-x-3 ml-2" >
+                    <img src={whiteUnlovedIcon} width={"35px"} alt="" />
+                </Link>
             </div>
             <div className="w-[485px] h-[30px] border border-white text-white ">
                 97,117 likes
@@ -30,7 +43,7 @@ const Post = () => {
 
                 <ReadMore text={"this islorem40 fdsajkjalsf lkejsflkdjlke rlekwrjlk;jrewlkjl ekrjlkrejljerl kjelkjlkewrj lkjwrelkj lkwerklwer jljwrelk jwerlkj  the text lol...."} maxLength={5} />
             </div>
-            <div className="w-[485px] h-[30px] border border-white text-white ">
+            <div className="w-[485px] h-[30px] border border-white text-white pl-1 ">
                 View all 322 comments
             </div>
 
