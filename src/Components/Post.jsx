@@ -1,10 +1,24 @@
 import ReadMore from "./Subcomponents/Readmore"
 import { Link } from "react-router-dom"
+import { useSelector } from 'react-redux'
+
 import whiteUnlovedIcon from "../Assets/Images/ForApp/WhiteUnlovedImage.png"
 import whiteLovedIcon from "../Assets/Images/ForApp/WhiteLovedImage.png"
+
+import darkUnlovedIcon from "../Assets/Images/ForApp/LightStore/blackUnlovedImage.png"
+import darkLovedIcon from "../Assets/Images/ForApp/LightStore/BlackLovedImage.png"
+
+
+import whiteCommentIcon from "../Assets/Images/ForApp/LightStore/comment_icon_ForDarkTheme.svg"
+import darkCommentIcon from "../Assets/Images/ForApp/comment_icon_ForWhiteTheme.svg"
+
+import whiteShareIcon from "../Assets/Images/ForApp/LightStore/share_icon_ForDarkTheme.svg"
+import darkShareIcon from "../Assets/Images/ForApp/share_icon_ForWhiteTheme.svg"
+
 const Post = () => {
+    const theme = useSelector((state) => state.theme.value)
     return (
-        <div className="w-[485px] h-[800px]  border-white">
+        <div className="w-[485px] h-[850px] border  border-white">
 
             <div className="w-[full] h-[40px] flex justify-between p-3">
 
@@ -23,15 +37,15 @@ const Post = () => {
             <div className="w-[485px] h-[40px]  border-white text-white mt-2 flex space-x-3">
 
                 <Link to={"/home/post/comments"} className="flex space-x-3 ml-2" >
-                    <img src={whiteUnlovedIcon} width={"35px"} alt="" />
+                    <img src={theme == "lightTheme" ? darkUnlovedIcon : whiteUnlovedIcon} width={"35px"} alt="" />
                 </Link>
 
                 <Link to={"/home/post/comments"} className="flex space-x-3 ml-2" >
-                    <img src={whiteUnlovedIcon} width={"35px"} alt="" />
+                    <img src={theme == "lightTheme" ? darkCommentIcon : whiteCommentIcon} width={"35px"} alt="" />
                 </Link>
 
                 <Link to={"/home/post/comments"} className="flex space-x-3 ml-2" >
-                    <img src={whiteUnlovedIcon} width={"35px"} alt="" />
+                    <img src={theme == "lightTheme" ? darkShareIcon : whiteShareIcon} width={"35px"} alt="" />
                 </Link>
             </div>
             <div className="w-[485px] h-[30px] border border-white text-white ">
@@ -41,14 +55,14 @@ const Post = () => {
             <div className=" h-fit border border-white text-white mt-2 p-1">
                 username
 
-                <ReadMore text={"this islorem40 fdsajkjalsf lkejsflkdjlke rlekwrjlk;jrewlkjl ekrjlkrejljerl kjelkjlkewrj lkjwrelkj lkwerklwer jljwrelk jwerlkj  the text lol...."} maxLength={5} />
+                <ReadMore text={"this islorem40 fdsajkjalsf lkejsflkdjlke rlekwrjlk;jrewlkjl ekrjlkrejljerl kjelkjlkewrj lkjwrelkj lkwerklwer jljwrelk jwerlkj  the text lol"} maxLength={55} />
             </div>
-            <div className="w-[485px] h-[30px]  border-white text-white pl-1 ">
+            <div className="w-[485px] h-fit  border-white text-white pl-1 ">
                 View all 322 comments
             </div>
 
-            <div className="w-[485px] h-[30px]  border-white text-white flex justify-between ">
-                <input className="w-[90%] bg-transparent text-blue-600 active:outline-none active:ring-offset-0" type="text" />
+            <div className="w-[485px] h-fit  border-white text-white flex justify-between ">
+                <input className="w-[90%] bg-red- text-blue-600 active:outline-none active:ring-offset-0" type="text" />
                 <button className="text-blue-800" >Post</button>
             </div>
 

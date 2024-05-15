@@ -11,9 +11,9 @@ const ReadMore = ({ text, maxLength }) => {
     return (
         <div className={`${isTruncated ? "h-8" : "w-fit"} inline`}>
             {isTruncated ? (
-                <p>{text.slice(0, maxLength)}... <button onClick={toggleTruncate}>More</button></p>
+                <p >{text.slice(0, maxLength)} <button className="font-bold" onClick={toggleTruncate}>...see more</button></p>
             ) : (
-                <p>{text} <button onClick={toggleTruncate}>Less</button></p>
+                <p onClick={toggleTruncate} >{text}</p>
             )}
         </div>
     );
