@@ -23,9 +23,9 @@ const GetChat = () => {
                 <TextMessageSent />
                 <TextMessageSent />
                 <TextMessageSent />
-                <TextMessageSent />
-                <TextMessageSent />
-                <TextMessageSent />
+                <TextMessageReceived />
+                <TextMessageReceived />
+                <TextMessageReceived />
                 <TextMessageSent />
                 <TextMessageSent />
 
