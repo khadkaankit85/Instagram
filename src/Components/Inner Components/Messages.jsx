@@ -1,5 +1,7 @@
 import NoMessages from "../Subcomponents/NoMessages"
 import Chat from "./Chat"
+import { Route, Routes } from "react-router-dom"
+import GetChat from "../Subcomponents/GetChat"
 const Messages = () => {
 
     return (
@@ -11,27 +13,13 @@ const Messages = () => {
                 <Chat />
                 <Chat />
                 <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
-                <Chat />
             </div>
 
             <div className="w-[60%] lg:w-[60%]  md:w-[80%] h-[80vh] md:flex items-center justify-center sm:hidden hidden">
-                <NoMessages />
+                <Routes>
+                    <Route path="/" element={<NoMessages />} />
+                    <Route path="/chat" element={<GetChat />} />
+                </Routes>
             </div>
 
 

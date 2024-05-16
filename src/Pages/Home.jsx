@@ -50,7 +50,7 @@ const Home = () => {
                             <Route path="/home/search" element={<>
                                 <h1 className="text-white">You are in search route</h1></>} />
 
-                            <Route path="/messages" element={
+                            <Route path="/messages/*" element={
                                 <Messages />
                             }
                             />
