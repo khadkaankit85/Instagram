@@ -8,7 +8,6 @@ import whiteLovedIcon from "../Assets/Images/ForApp/WhiteLovedImage.png"
 import darkUnlovedIcon from "../Assets/Images/ForApp/LightStore/blackUnlovedImage.png"
 import darkLovedIcon from "../Assets/Images/ForApp/LightStore/BlackLovedImage.png"
 
-
 import whiteCommentIcon from "../Assets/Images/ForApp/LightStore/comment_icon_ForDarkTheme.svg"
 import darkCommentIcon from "../Assets/Images/ForApp/comment_icon_ForWhiteTheme.svg"
 
@@ -16,6 +15,8 @@ import whiteShareIcon from "../Assets/Images/ForApp/LightStore/share_icon_ForDar
 import darkShareIcon from "../Assets/Images/ForApp/share_icon_ForWhiteTheme.svg"
 
 const Post = () => {
+
+
     const theme = useSelector((state) => state.theme.value)
     return (
         <div className="w-[485px] h-[850px] border  border-white">
