@@ -6,7 +6,8 @@ const UserProfile = () => {
             <div className="flex flex-col items-center justify-between  ">
                 <div className="flex justify-center  border-b border-b-white space-x-20 lg:space-x-40 w-[100%] h-[43vh] p-5">
                     <div className="  object-contain" >
-                        <img src="https://avatars.githubusercontent.com/u/145488454?v=4" width={"110px"} className="rounded-[50%] w-[110px] " alt="" />
+                        <input type="file" className="translate-y-0 rounded-full w-[110px] h-[110px] bg-red-300 cursor-pointer absolute opacity-0" />
+                        <img src="https://avatars.githubusercontent.com/u/145488454?v=4" width={"110px"} className="rounded-[50%] w-[110px] " alt="pfp" />
                     </div>
                     <div className="flex flex-col space-y-4">
                         <div>
