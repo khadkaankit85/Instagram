@@ -103,10 +103,9 @@ const SignupBox = () => {
 
     return (
         <>
+
+
             <div className="login-form-div md:w-[40vw] md:h-[68vh] sm:w-[60%]  sm:[h-70vh] border border-solid rounded-3xl border-black mx-auto my-auto  lg:w-[40%] lg:h-[70vh] w-[70vw] h-[70vh]"  >
-
-
-
                 {
                     <div>
 
@@ -219,6 +218,8 @@ const SignupBox = () => {
                                 },
                                 body: JSON.stringify(userdetail.current)
                             })
+
+
                             if (response.status == 200) {
                                 window.location = "/emailverification"
                             }
@@ -292,6 +293,8 @@ const SignupBox = () => {
 
 
             </div >
+
+
         </>
     )
 }

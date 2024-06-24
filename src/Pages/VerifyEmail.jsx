@@ -178,8 +178,13 @@ const VerifyEmail = () => {
 
                             console.log(otpToSubmit.length, "=", otpToSubmit)
 
+                            if (response.status == 401) {
+                                toast.error("Invalid OTP")
 
-                            if (response.ok) {
+                            }
+
+
+                            if (response.status == 200) {
 
                                 toast.info('Account created Succcessfully, redirecting to login page in 5 seconds', {
                                     position: "top-right",
