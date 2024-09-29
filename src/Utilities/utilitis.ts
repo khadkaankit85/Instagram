@@ -1,6 +1,6 @@
 
-let body = document.querySelector("body")
-let theme = localStorage.getItem("theme")
+let body = document.querySelector("body") as HTMLElement
+let theme = localStorage.getItem("theme") 
 
 //checking for previously saved theme
 if (theme == "darkTheme") {

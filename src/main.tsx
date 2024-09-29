@@ -5,9 +5,9 @@ import "./Styles/index.css";
 //importing the provider from redux toolkit
 import { Provider } from "react-redux";
 //importing our redux theme store from our created file
-import { store } from "./Redux/store.js";
+import store from "./Redux/store";
 import { Auth0Provider } from "@auth0/auth0-react";
-import { myRouter } from "./Components/Routes.jsx";
+import myRouter from "./Components/Routes.js";
 import { RouterProvider } from "react-router-dom";
 import { Container } from "react-dom";
 
